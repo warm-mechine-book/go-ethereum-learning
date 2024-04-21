@@ -13,6 +13,7 @@ import (
 // go run cmd/p2p/main.go
 func main() {
 	nodekey, _ := crypto.GenerateKey()
+	fmt.Println(nodekey.PublicKey)
 	srv := p2p.Server{
 		Config: p2p.Config{
 			PrivateKey: nodekey,
